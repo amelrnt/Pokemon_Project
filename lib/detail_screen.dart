@@ -31,7 +31,13 @@ class DetailScreen extends StatelessWidget {
                           Navigator.pop(context);
                         },
                       ),
-                      Text(snapshot.data!.name + ' #' + snapshot.data!.id.toString() ),
+                      Text(
+                        snapshot.data!.name + ' #' + snapshot.data!.id.toString(), 
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 24,
+                        ),
+                      ),
                       BookmarkButton(name: snapshot.data!.name, url: url),
                     ],
                   ),
@@ -40,7 +46,13 @@ class DetailScreen extends StatelessWidget {
                     children: <Widget>[
                       Image.network(snapshot.data!.sprites.frontDefault),
                       //Text('DescriptionDescription\nDescription'),
-                      Text(snapshot.data!.baseExperience.toString()),
+                      Text(
+                        snapshot.data!.baseExperience.toString(),
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 26,
+                        ),
+                      ),
                       //Text(snapshot.data!.baseExperience.toString()?? 'null'),
                     ],
                   ),
@@ -55,61 +67,198 @@ class DetailScreen extends StatelessWidget {
                                 Column(
                                   children: [
                                     // TODO: Loop here for stat
-                                    //Textsnapshot.data!.stats.map((e) => new Text(e.stat.name));
-                                    Text('HP'),
-                                    Text('Attack'),
-                                    Text('Defense'),
-                                    Text('Special-attack'),
-                                    Text('Special-defense'),
-                                    Text('Speed'),
+                                    //snapshot.data!.stats.map((e) => new Text(e.stat.name));
+                                    Text(
+                                      'HP',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18,
+                                      ),
+                                    ),
+                                    Text(
+                                      'Attack',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18,
+                                      ),
+                                    ),
+                                    Text(
+                                      'Defense',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18,
+                                      ),
+                                    ),
+                                    Text(
+                                      'Special-attack',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18,
+                                      ),
+                                    ),
+                                    Text(
+                                      'Special-defense',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18,
+                                      ),
+                                    ),
+                                    Text(
+                                      'Speed',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18,
+                                      ),
+                                    ),
                                   ],
+                                ),
+                                SizedBox(
+                                  width: 6.0,
                                 ),
                                 Column(
                                   children: [
-                                    // TODO: Loop here for stat
-                                    Text(snapshot.data!.stats[0].baseStat.toString()),
-                                    Text('42'),
-                                    Text('49'),
-                                    Text('45'),
-                                    Text('42'),
-                                    Text('49'),
+                                    Text(
+                                      snapshot.data!.stats[0].baseStat.toString(),
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18,
+                                      ),
+                                    ),
+                                    Text(
+                                      snapshot.data!.stats[1].baseStat.toString(),
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18,
+                                      ),
+                                    ),
+                                    Text(
+                                      snapshot.data!.stats[2].baseStat.toString(),
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18,
+                                      ),
+                                    ),
+                                    Text(
+                                      snapshot.data!.stats[3].baseStat.toString(),
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18,
+                                      ),
+                                    ),
+                                    Text(
+                                      snapshot.data!.stats[4].baseStat.toString(),
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18,
+                                      ),
+                                    ),
+                                    Text(
+                                      snapshot.data!.stats[5].baseStat.toString(),
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18,
+                                      ),
+                                    ),
                                   ],
                                 ),
                               ],
                             ),
                             color: Colors.yellowAccent,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.all(Radius.circular(20)),
+                            ),
                           ),    
                           Container(
                             child: Row(
                               children: [
                                 Column(
                                   children: <Widget>[
-                                    Text('Height'),
-                                    Text(snapshot.data!.height.toString()+ '\''),
-                                    Text('Weight'),
+                                    Text(
+                                      'Height',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18,
+                                      ),
+                                    ),
+                                    Text(
+                                      snapshot.data!.height.toString()+ '\'',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18,
+                                      ),
+                                    ),
+                                    Text(
+                                      'Weight',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18,
+                                      ),
+                                    ),
                                     //Text(snapshot.data!=null?snapshot.data!.weight.toString():'default value'),
-                                    Text(snapshot.data!.weight.toString()+ ' lbs'),
+                                    Text(
+                                      snapshot.data!.weight.toString()+ ' lbs',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18,
+                                      ),
+                                    ),
                                   ],
+                                ),
+                                SizedBox(
+                                  width: 6.0,
                                 ),
                                 Column(
                                   children: <Widget>[
                                     // TODO: Map abilities here
-                                    Text('Ability'),
+                                    Text(
+                                      'Ability',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18,
+                                      ),
+                                    ),
                                     //Text(snapshot.data!=null?snapshot.data!.abilities[0].ability.name:'default value'),
-                                    Text(snapshot.data!.abilities[0].ability.name),
-                                    Text('Hidden Ability'),
+                                    Text(
+                                      snapshot.data!.abilities[0].ability.name,
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18,
+                                      ),
+                                    ),
+                                    Text(
+                                      'Hidden Ability',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18,
+                                      ),
+                                    ),
                                     //Text(snapshot.data!=null?snapshot.data!.abilities[1].ability.name:'default value'),
-                                    Text(snapshot.data!.abilities[1].ability.name),
+                                    Text(
+                                      snapshot.data!.abilities[1].ability.name,
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18,
+                                      ),
+                                    ),
                                   ],
                                 ),
                               ],
                             ),
                             color: Colors.blueAccent,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.all(Radius.circular(20)),
+                            ),
                           ),
                         
                         ],
                       ),
-                      Text('Types'),
+                      Text(
+                        'Types',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                        ),
+                      ),
                       Container(
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -117,9 +266,17 @@ class DetailScreen extends StatelessWidget {
                             // TODO : loop here for types
                             Container(
                               child: 
-                              //Text(snapshot.data!=null?snapshot.data!.types[0].type.name:'default value'),
-                              Text(snapshot.data!.types[0].type.name),
+                              Text(
+                                snapshot.data!.types[0].type.name,
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18,
+                                ),
+                              ),
                               color: Colors.yellowAccent,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.all(Radius.circular(20)),
+                              ),
                             ),
                             // Container(
                             //   child: Text(snapshot.data!.types[1].type.name),

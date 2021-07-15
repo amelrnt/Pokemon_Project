@@ -13,13 +13,13 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  late Future<AllPokemon> pokemonData;
+  //late Future<AllPokemon> pokemonData;
   bool _isLoading = false;
   TextEditingController _controllerSearch = new TextEditingController();
 
   @override
   void initState() {
-    pokemonData = getAllPokemon();
+    //pokemonData = getAllPokemon();
     super.initState();
   }
 
@@ -92,15 +92,16 @@ class _HomeScreenState extends State<HomeScreen> {
                               );
                             },
                             child: GridTile(
-                              // header: Center(
-                              //   child: Text(
-                              //     snapshot.data!.results[index].name
-                              //   ),
-                              // ),
-                              child: Text(
-                                snapshot.data!.results[index].name
+                              header: Center(
+                                child: Text(
+                                  snapshot.data!.results[index].name,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18,
+                                  ),
+                                ),
                               ),
-                              //Image.network('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/1.png'),
+                              child: Image.network('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'+(index+1).toString()+'.png'),
                               // footer: Container(
                               //   child: Row(
                               //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
